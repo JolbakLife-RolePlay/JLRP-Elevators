@@ -55,7 +55,13 @@ AddEventHandler('JLRP-Elevators:Client:OpenMenu', function(data)
             local found, onDutyIssue
             for i=1, #v.jobs do
                 if Config.Framework.PlayerData.job.name == v.jobs[i] then
-					if Config.Framework.PlayerData.job.onDuty then
+					if Config.Framework.Name == 'JLRP-Framework' and Config.Framework.PlayerData.job.onDuty then
+						found = true
+					elseif Config.Framework.Name == 'es_extended' and Config.Framework.PlayerData.job.onDuty then
+						found = true
+					elseif Config.Framework.Name == 'qb-core' and Config.Framework.PlayerData.job.onduty then
+						found = true
+					elseif Config.Framework.Name == 'other' then
 						found = true
 					else
 						onDutyIssue = true

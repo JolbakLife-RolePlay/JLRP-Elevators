@@ -1,7 +1,7 @@
 Config = {}
 
 Config.Framework = {
-	Name = 'JLRP-Framework', -- valid values: 'JLRP-Framework', 'es_extended', 'qb-core', 'other'
+	Name = 'qb-core', -- valid values: 'JLRP-Framework', 'es_extended', 'qb-core', 'other'
 }
 
 Config.Target = 'qtarget' -- valid values: 'qtarget', 'qb-target', 'none'

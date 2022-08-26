@@ -6,7 +6,8 @@ CreateThread(function() -- Why did I write my code like this? It takes time to u
 	if Config.Framework.Name == 'JLRP-Framework' then
 		Config.Framework.Objects = exports[Config.Framework.Name]:GetFrameworkObjects()
 		if not Config.IsDuplicityVersion then -- only register this in client
-			while not Config.Framework.PlayerData do
+			Config.Framework.PlayerData = Config.Framework.Objects.GetPlayerData()
+			while not Config.Framework.PlayerData or not Config.Framework.PlayerData.job do
 				Config.Framework.PlayerData = Config.Framework.Objects.GetPlayerData()
 				Wait(10)
 			end
@@ -31,7 +32,8 @@ CreateThread(function() -- Why did I write my code like this? It takes time to u
 			end
 		end
 		if not Config.IsDuplicityVersion then -- only register this in client
-			while not Config.Framework.PlayerData do
+			Config.Framework.PlayerData = Config.Framework.Objects.GetPlayerData()
+			while not Config.Framework.PlayerData or not Config.Framework.PlayerData.job do
 				Config.Framework.PlayerData = Config.Framework.Objects.GetPlayerData()
 				Wait(10)
 			end
@@ -45,14 +47,15 @@ CreateThread(function() -- Why did I write my code like this? It takes time to u
 	elseif Config.Framework.Name == 'qb-core' then
 		Config.Framework.Objects = exports[Config.Framework.Name]:GetCoreObject()
 		if not Config.IsDuplicityVersion then -- only register this in client
-			while not Config.Framework.PlayerData do
+			Config.Framework.PlayerData = Config.Framework.Objects.Functions.GetPlayerData()
+			while not Config.Framework.PlayerData or not Config.Framework.PlayerData.job do
 				Config.Framework.PlayerData = Config.Framework.Objects.Functions.GetPlayerData()
 				Wait(10)
 			end
-			RegisterNetEvent('QBCore:Client:OnJobUpdate', function(job)
-				local last = Config.Framework.PlayerData?.job
-                Config.Framework.PlayerData.job = job
-				if OnPlayerData ~= nil then OnPlayerData('job', job, last) end -- The function we can create inside external resources
+			RegisterNetEvent('QBCore:Player:SetPlayerData', function(PlayerData)
+				local last = Config.Framework.PlayerData
+                Config.Framework.PlayerData = PlayerData
+				if OnPlayerData ~= nil then OnPlayerData('job', Config.Framework.PlayerData.job, last.job) end -- The function we can create inside external resources
             end)
 		end
 	else

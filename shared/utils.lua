@@ -55,7 +55,7 @@ CreateThread(function() -- Why did I write my code like this? It takes time to u
 			RegisterNetEvent('QBCore:Player:SetPlayerData', function(PlayerData)
 				local last = Config.Framework.PlayerData
                 Config.Framework.PlayerData = PlayerData
-				if OnPlayerData ~= nil then OnPlayerData('job', Config.Framework.PlayerData.job, last.job) end -- The function we can create inside external resources
+				if last.job ~= Config.Framework.PlayerData and OnPlayerData ~= nil then OnPlayerData('job', Config.Framework.PlayerData.job, last.job) end -- The function we can create inside external resources
             end)
 		end
 	else

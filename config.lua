@@ -183,6 +183,18 @@ Config.Elevators = {
 	},
 	MountZonahHospital1 = {
 		[1] = {
+            coords = vec(-443.96, -333.1, 78.47), -- Coords, if you're new; last number is heading
+            heading = 354.13, -- Heading of how will spawn on floor
+            title = 'Top Floor', -- Title 
+            description = 'Rooftop', -- Description
+            target = { -- Target length/width
+                width = 0.5,
+                length = 0.5,
+            },
+			floorLevel = 3, -- (optional) your logic-based number of this elavator's floor
+			debug = false,
+        },
+		[2] = {
             coords = vec(-453.22, -289.83, 69.83), -- Coords, if you're new; last number is heading
             heading = 107.7, -- Heading of how will spawn on floor
             title = 'Higher Floor', -- Title 
@@ -194,7 +206,7 @@ Config.Elevators = {
 			floorLevel = 2, -- (optional) your logic-based number of this elavator's floor
 			debug = false,			
         },
-		[2] = {
+		[3] = {
             coords = vec(-453.2, -289.8, 35.2), -- Coords, if you're new; last number is heading
             heading = 110.55, -- Heading of how will spawn on floor
             title = 'Main Floor', -- Title 
@@ -206,7 +218,7 @@ Config.Elevators = {
 			floorLevel = 0, -- (optional) your logic-based number of this elavator's floor
 			debug = false,
         },
-		[3] = {
+		[4] = {
             coords = vec(-420.47, -344.3, 24.52), -- Coords, if you're new; last number is heading
             heading = 110.55, -- Heading of how will spawn on floor
             title = 'Underground Floor', -- Title 
@@ -218,7 +230,7 @@ Config.Elevators = {
 			floorLevel = -1, -- (optional) your logic-based number of this elavator's floor
 			debug = false,
         },
-		[4] = {
+		[5] = {
             coords = vec(-453.291, -289.767, -130.54), -- Coords, if you're new; last number is heading
             heading = 119.055, -- Heading of how will spawn on floor
             title = 'Underground Floor', -- Title 
@@ -259,6 +271,18 @@ Config.Elevators = {
 	},
 	MountZonahHospital3 = {
 		[1] = {
+            coords = vec(-499.74, -325.7, 73.47), -- Coords, if you're new; last number is heading
+            heading = 352.3, -- Heading of how will spawn on floor
+            title = 'Rooftop Floor', -- Title 
+            description = 'Entrance 1', -- Description
+            target = { -- Target length/width
+                width = 0.5,
+                length = 0.5,
+            },
+			floorLevel = 3, -- (optional) your logic-based number of this elavator's floor
+			debug = false,
+        },
+		[2] = {
             coords = vec(-492.69, -328.55, 69.8), -- Coords, if you're new; last number is heading
             heading = 164.409, -- Heading of how will spawn on floor
             title = 'Higer Floor', -- Title 
@@ -270,7 +294,7 @@ Config.Elevators = {
 			floorLevel = 2, -- (optional) your logic-based number of this elavator's floor
 			debug = false,
         },
-		[2] = {
+		[3] = {
             coords = vec(-492.78, -328.43, 42.6), -- Coords, if you're new; last number is heading
             heading = 170.078, -- Heading of how will spawn on floor
             title = 'Upper Floor', -- Title 
@@ -285,6 +309,18 @@ Config.Elevators = {
 	},
 	MountZonahHospital4 = {
 		[1] = {
+            coords = vec(-499.74, -325.7, 73.47), -- Coords, if you're new; last number is heading
+            heading = 352.3, -- Heading of how will spawn on floor
+            title = 'Rooftop Floor', -- Title 
+            description = 'Entrance 2', -- Description
+            target = { -- Target length/width
+                width = 0.5,
+                length = 0.5,
+            },
+			floorLevel = 3, -- (optional) your logic-based number of this elavator's floor
+			debug = false,
+        },
+		[2] = {
             coords = vec(-489.72, -328.89, 69.9), -- Coords, if you're new; last number is heading
             heading = 167.24, -- Heading of how will spawn on floor
             title = 'Higher Floor', -- Title 
@@ -296,7 +332,7 @@ Config.Elevators = {
 			floorLevel = 2, -- (optional) your logic-based number of this elavator's floor
 			debug = false,
         },
-		[2] = {
+		[3] = {
             coords = vec(-489.81, -328.90, 42.6), -- Coords, if you're new; last number is heading
             heading = 170.07, -- Heading of how will spawn on floor
             title = 'Upper Floor', -- Title 
@@ -311,6 +347,18 @@ Config.Elevators = {
 	},
 	MountZonahHospital5 = {
 		[1] = {
+            coords = vec(-499.74, -325.7, 73.47), -- Coords, if you're new; last number is heading
+            heading = 352.3, -- Heading of how will spawn on floor
+            title = 'Rooftop Floor', -- Title 
+            description = 'Entrance 3', -- Description
+            target = { -- Target length/width
+                width = 0.5,
+                length = 0.5,
+            },
+			floorLevel = 3, -- (optional) your logic-based number of this elavator's floor
+			debug = false,
+        },
+		[2] = {
             coords = vec(-486.73, -329.401, 69.800), -- Coords, if you're new; last number is heading
             heading = 161.57, -- Heading of how will spawn on floor
             title = 'Higher Floor', -- Title 
@@ -322,7 +370,7 @@ Config.Elevators = {
 			floorLevel = 2, -- (optional) your logic-based number of this elavator's floor
 			debug = false,
         },
-		[2] = {
+		[3] = {
             coords = vec(-486.725, -329.327, 42.604), -- Coords, if you're new; last number is heading
             heading = 170.07, -- Heading of how will spawn on floor
             title = 'Upper Floor', -- Title 
